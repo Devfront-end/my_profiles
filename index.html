@@ -1,179 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Profile Content</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Modal Backdrop */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Modal Content Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: auto;
-            /* Auto width based on content size */
-            max-width: 21rem;
-            /* Max width as a rough approximation of provided aspect ratio */
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* The Close Button */
-        .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Adjusting modal width and max-width for different devices */
-        @media (min-width: 768px) {
-            .modal-content {
-                width: calc((100vh - 40px) * (7 / 9));
-                /* Height-based width for aspect ratio */
-                max-width: 21rem;
-            }
-        }
-    </style>
 </head>
-
 <body class="bg-blue-100">
-    <!-- Header -->
     <header class="bg-blue-600 p-4 text-white text-3xl font-bold">
         LOGO
     </header>
 
-    <!-- Main content -->
     <div class="flex">
-        <!-- Sidebar for profile links -->
         <div class="w-1/4 bg-white p-5">
             <ul id="profile-nav" class="space-y-2">
-                <!-- Buttons to open modals -->
                 <li>
-                    <button id="myBtn"
-                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">LinkedIn
-                        Profile</button>
+                    <button id="myBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">LinkedIn Profile</button>
                 </li>
                 <li>
-                    <button id="myBtn2"
-                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Indeed
-                        Profile</button>
+                    <button id="myBtn2" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Indeed Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn3" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">France Travail Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn4" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">HelloWork Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn5" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Monster Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn6" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Meteojob Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn7" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Welcome to the Jungle Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn8" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Jobble Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn9" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Free Work Profile</button>
+                </li>
+                <li>
+                    <button id="myBtn10" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none w-full">Apple Profile</button>
                 </li>
             </ul>
         </div>
 
-        <!-- Modals -->
         <div id="myModal" class="modal">
-            <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2 class="text-lg font-bold mb-4">Jules Eulalie - Testeur Logiciel</h2>
-                <p>Membre depuis juillet 2011</p>
-                <p>Coordonnées - Mis à jour il y a moins de 3 mois</p>
-                <p>Photo du profil - Mis à jour il y a plus d'un an</p>
-                <h3 class="font-bold mt-2">Mes compétences:</h3>
-                <ul class="list-disc list-inside">
-                    <li>Langages de programmation informatique</li>
-                    <li>Organiser son travail selon les priorités</li>
-                    <li>Faire preuve de réactivité</li>
-                    <li>Procéder aux phases de tests et de recettes des applications</li>
-                    <li>Faire preuve de curiosité</li>
-                </ul>
-                <div class="mt-4 text-center">
-                    <a href="https://www.linkedin.com/in/jules-eulalie/" target="_blank"
-                        class="text-blue-500 hover:text-blue-700">View Full Profile on LinkedIn</a>
-                </div>
+                <iframe src="linkedin_profile.html" width="100%" height="100%"></iframe>
             </div>
         </div>
 
         <div id="myModal2" class="modal">
-            <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2 class="text-lg font-bold mb-4">Jules Eulalie - Testeur Logiciel</h2>
-                <p>Membre depuis juillet 2011</p>
-                <p>Coordonnées - Mis à jour il y a moins de 3 mois</p>
-                <p>Photo du profil - Mis à jour il y a plus d'un an</p>
-                <h3 class="font-bold mt-2">Mes compétences:</h3>
-                <ul class="list-disc list-inside">
-                    <li>Langages de programmation informatique</li>
-                    <li>Organiser son travail selon les priorités</li>
-                    <li>Faire preuve de réactivité</li>
-                    <li>Procéder aux phases de tests et de recettes des applications</li>
-                    <li>Faire preuve de curiosité</li>
-                </ul>
-                <div class="mt-4 text-center">
-                    <a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-homepage" target="_blank"
-                        class="text-blue-500 hover:text-blue-700">View Full Profile on Indeed</a>
-                </div>
+                <iframe src="indeed_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="france_travail_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="hellowork_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="monster_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="meteojob_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal7" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="welcome_to_the_jungle_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal8" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="jobble_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal9" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="free_work_profile.html" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div id="myModal10" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="apple_profile.html" width="100%" height="100%"></iframe>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript to control modals -->
-    <script>
-        // Get the modals
-        var modal = document.getElementById('myModal');
-        var modal2 = document.getElementById('myModal2');
-
-        // Get the buttons that open the modals
-        var btn = document.getElementById('myBtn');
-        var btn2 = document.getElementById('myBtn2');
-
-        // Get the <span> elements that close the modals
-        var span = document.getElementsByClassName('close');
-
-        // When the user clicks the button, open the corresponding modal 
-        btn.onclick = function () {
-            modal.style.display = 'block';
-        }
-        btn2.onclick = function () {
-            modal2.style.display = 'block';
-        }
-
-        // When the user clicks on <span> (x), close the corresponding modal
-        span[0].onclick = function () {
-            modal.style.display = 'none';
-        }
-        span[1].onclick = function () {
-            modal2.style.display = 'none';
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-            if (event.target == modal2) {
-                modal2.style.display = 'none';
-            }
-        }
-        </script>
-    </body>
-    </html>
+    <script src="script.js"></script>
+</body>
+</html>
